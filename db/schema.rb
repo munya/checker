@@ -11,16 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140923185455) do
+ActiveRecord::Schema.define(version: 20140924202925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "citext"
+  enable_extension "hstore"
 
   create_table "events", force: true do |t|
     t.string   "identifier"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.hstore   "options"
+  end
+
+  create_table "operations", force: true do |t|
+    t.string   "function_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.hstore   "options"
+    t.string   "ap_id"
   end
 
 end

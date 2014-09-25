@@ -46,10 +46,16 @@
           <span class="icon-bar"></span>
         </button>
         <%= link_to 'Checker DEMO', root_path, class: 'navbar-brand' %>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Refresh operations', get_operations_operations_path %></li>
+          </ul>
+        </div>  
       </div>
     </div>
 
     <div class="container">
+      <%= flash[:operations].html_safe if flash[:operations] %>
       <%= bootstrap_flash %>
       <%= yield %>
     </div> <!-- /container -->

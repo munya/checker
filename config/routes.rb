@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :operations do
+    collection do
+      get :get_operations
+    end
+  end  
+
   root to: 'events#index'
 
   resources :events
