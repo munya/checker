@@ -10,5 +10,6 @@ staging:
   <<: *defaults
 
 production:
-  <<: *defaults
+  client:
+    app_key: 'c57e6af0ae220339b09fe8c76a6dabbb'
   arrow_pass_host: 'http://qa.arrowpass.com'
