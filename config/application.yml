@@ -1,7 +1,7 @@
 defaults: &defaults
   arrow_pass_host: 'http://arrow-pass.dev'
   client:
-    app_key: '9164e3014bc4fec9a4054e0a68fbbc81'
+    app_key: '1111111111'
     
 development:
   <<: *defaults
@@ -11,5 +11,5 @@ staging:
 
 production:
   client:
-    app_key: 'c57e6af0ae220339b09fe8c76a6dabbb'
+    app_key: '1111111111'
   arrow_pass_host: 'http://qa.arrowpass.com'
